@@ -11,39 +11,206 @@
 }
 #header {
 	background-color: #CCCCCC;
-	width: 100%;
-	height: 16%;
-	position: absolute;
+	width: auto;
+	height: 10%;
+	position: relative;
 	right: 0%;
 	left: 0%;
 	top: 0%;
 	bottom: auto;
+	padding-left:1%;
+	padding-top: 1%;
+	padding-right: 1%;
+	padding-bottom: 1%;
 }
 #menu {
 	background-color: #000000;
-	width: 100%;
-	height: 8%;
-	position: absolute;
-	right: 0%;
-	left: 0%;
-	top: 16%;
+	width: auto;
+	height: 4%;
+	position: relative;
+	float: center;
+	right: auto;
+	left: auto;
+	top: auto;
 	bottom: auto;
-	a:link {
-		color: #FFFFFF;
-		text-decoration: none;
-	}
-	a:visited {
-		color: #FFFFFF;
-		text-decoration: none;
-	}
-	a:hover {
-		color: #60BD50;
-		text-decoration: none;
-	}
-	a:active {
-		color: #FFFFFF;
-		text-decoration: none;
-	}
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-top: 1%;
+	padding-bottom: 1%;
 }
-
-	
+#buttonDiv {
+	position: relative;
+	height: 100%;
+	width: auto;
+	float: left;
+	right: auto;
+	left: auto;
+	top: auto;
+	bottom: auto;
+	padding-left: 1%;
+	padding-right: 2%;
+	padding-top: auto;
+	padding-bottom: auto;
+}
+#main {
+	background-color: #FCFCFC;
+	width: auto;
+	height: auto;
+	float: bottom;
+	position: relative;
+	right: auto;
+	left: auto;
+	top: auto;
+	bottom: auto;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+#formContainers {
+	position: relative;
+	width: 45%;
+	height: auto;
+	float: left;
+	right: auto;
+	left: auto;
+	top: auto;
+	bottom: auto;
+	padding-left: 0%;
+	padding-right: 0%;
+	padding-top: 0%;
+	padding-bottom: 0%;
+}
+#loremIpsum {
+	font-family: sans-serif;
+	float:left;
+	position: relative;
+	width: auto;
+	height: auto;
+	font-size:80%;
+	font-style:bold;
+	top: auto;
+	right: auto;
+	left: auto;
+	bottom: auto;
+	padding-left: 0%;
+	padding-right: 0%;
+	padding-top: 0%;
+	padding-bottom: 0%;
+}
+#textBoxLabel {
+	float:left;
+	position: relative;
+	width: 50%;
+	top: auto;
+	right: auto;
+	left: auto;
+	bottom: auto;
+	padding-left: 0%;
+	padding-right: 0%;
+	padding-top: 0%;
+	padding-bottom: 0%;
+}
+#textBox {
+	float: right;
+	position: relative;
+	width: 50%;
+	height: auto;
+	top: auto;
+	right: auto;
+	left: auto;
+	bottom: auto;
+	padding-left: 0%;
+	padding-right: 0%;
+	padding-top: 0%;
+	padding-bottom: 0%;
+}
+#selectBoxLabel {
+	float:left;
+	position: relative;
+	height: auto;
+	width: 50%;
+	top: auto;
+	right: auto;
+	left: auto;
+	bottom: auto;
+	padding-left: 0%;
+	padding-right: 0%;
+	padding-top: 0%;
+	padding-bottom: 0%;
+}
+#selectBox {
+	float: right;
+	height: auto;
+	width: 50%;
+	position: relative;
+	top: auto;
+	right: auto;
+	left: auto;
+	bottom: auto;
+	padding-left: 0%;
+	padding-right: 0%;
+	padding-top: 0%;
+	padding-bottom: 0%;
+}
+#space {
+	width: 50%;
+	height: auto;
+	position: relative;
+	float: left;
+}
+#button {
+	height: auto;
+	width: 50%;
+	position: relative;
+	float: right;
+}
+#progressContainer {	
+	float: none;
+	height: auto;
+	width: auto;
+	position: relative;
+	top: 0%;
+	right: 0%;
+	left: auto;
+	bottom: auto;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+#currentProgress {
+	background-color: #F0F0FF;
+	float: right;
+	height: auto;
+	width: auto;
+	position: relative;
+	top: 0%;
+	left: 0%;
+	right: 0%;
+	bottom: auto;
+	padding: 1%;
+}
+#lifeStatus {
+	float: left;
+	height: auto;
+	width: auto;
+	position: relative;
+	top: auto;
+	left: 0%;
+	right: auto;
+	bottom: 0%;
+}
+#bottomCopyrightInformation {
+	background-color: #F0F0F0;
+	height: 10%;
+	width: 100%;
+	position: relative;
+	float: none;
+	top: auto;
+	left: auto;
+	right: auto;
+	bottom: 0%;
+	padding: 1%;
+	text-align: center;
+}
