@@ -2,19 +2,3 @@ body {
 	background-color: #AAAAAA;
 	font-family:Arial;
 }
-	a:link {
-		color: #FFFFFF;
-		text-decoration: none;
-	}
-	a:visited {
-		color: #FFFFFF;
-		text-decoration: none;
-	}
-	a:hover {
-		color: #60BD50;
-		text-decoration: none;
-	}
-	a:active {
-		color: #FFFFFF;
-		text-decoration: none;
-	}

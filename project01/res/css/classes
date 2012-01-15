@@ -1,0 +1,33 @@
+.menu {
+	width: 100%;
+	height: 100%;
+	right: auto;
+	left: 0%;
+	top: auto;
+	bottom: auto;
+}
+.menu ul {
+	margin: 0;
+	padding:0%;
+	float: left;
+	width: 100%;
+}
+.menu ul li {
+	display: inline;
+}
+.menu ul li a {
+	float: left;
+	position: relative;
+	text-decoration: none;
+	color: #FFFFFF;
+	padding-right: 2%;
+}
+.menu ul li a:visited {
+	color: #FFFFFF;
+}
+.menu ul li a:hover {
+	color: #60BD50;
+}
+.menu ul li a:active {
+	color: #FFFFFF;
+}	

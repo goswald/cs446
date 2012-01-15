@@ -1,32 +1,61 @@
 #container {
 	background-color: #ffffff;
 	width:90%;
-	height:40%;
+	height:50%;
 	position: absolute;
 	right: 5%;
 	left: 5%;
 	top: 0%;
 	bottom: auto;
 	border: 1px solid black;
+	margin: 0;
+	padding: 0;
 }
 #header {
 	background-color: #CCCCCC;
 	width: auto;
-	height: 10%;
+	height: auto;
 	position: relative;
 	right: 0%;
 	left: 0%;
 	top: 0%;
 	bottom: auto;
-	padding-left:1%;
+	margin: 0;
+	padding: 0;
+}
+#title {
+	background-color: inherited;
+	width: auto;
+	height: auto;
+	position: relative;
+	float: top;
+	left: 0%;
+	top: 0%;
+	font-weight: bold;
+	font-style: bold;
+	font-size: 200%;
+	margin: 0;
+	padding-left: 1%;
 	padding-top: 1%;
-	padding-right: 1%;
+	background-color: #CCCCCC;
+}
+#subtext {
+	background-color: #CCCCCC;
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding-left: 1%;
 	padding-bottom: 1%;
+	position: relative;
+	float: bottom;
+	left: 0%;
+	bottom: 0%;
+	color: #666666;
 }
 #menu {
 	background-color: #000000;
 	width: auto;
-	height: 4%;
+	height: auto;
 	position: relative;
 	float: center;
 	right: auto;
@@ -37,34 +66,20 @@
 	padding-right: 1%;
 	padding-top: 1%;
 	padding-bottom: 1%;
-}
-#buttonDiv {
-	position: relative;
-	height: 100%;
-	width: auto;
-	float: left;
-	right: auto;
-	left: auto;
-	top: auto;
-	bottom: auto;
-	padding-left: 1%;
-	padding-right: 2%;
-	padding-top: auto;
-	padding-bottom: auto;
-}
+}	
 #main {
 	background-color: #FCFCFC;
 	width: auto;
-	height: auto;
+	height: 4%;
 	float: bottom;
 	position: relative;
 	right: auto;
 	left: auto;
-	top: auto;
+	top: 0%;
 	bottom: auto;
 	padding-left: 1%;
 	padding-right: 1%;
-	padding-top: 1%;
+	padding-top: 0%;
 	padding-bottom: 1%;
 }
 #formContainers {
@@ -87,8 +102,9 @@
 	position: relative;
 	width: auto;
 	height: auto;
-	font-size:80%;
+	font-size:150%;
 	font-style:bold;
+	font-weight: bold;	
 	top: auto;
 	right: auto;
 	left: auto;
@@ -97,6 +113,13 @@
 	padding-right: 0%;
 	padding-top: 0%;
 	padding-bottom: 0%;
+}
+#contentOrganizer {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: auto;
+	width: 100%;
 }
 #textBoxLabel {
 	float:left;
@@ -166,9 +189,9 @@
 	float: right;
 }
 #progressContainer {	
-	float: none;
+	float: right;
 	height: auto;
-	width: auto;
+	width: 30%;
 	position: relative;
 	top: 0%;
 	right: 0%;
@@ -176,15 +199,16 @@
 	bottom: auto;
 	padding-left: 1%;
 	padding-right: 1%;
-	padding-top: 1%;
+	padding-top: 0%;
 	padding-bottom: 1%;
 }
 #currentProgress {
 	background-color: #F0F0FF;
 	float: right;
 	height: auto;
-	width: auto;
+	width: 75%;
 	position: relative;
+	font-style: bold;
 	top: 0%;
 	left: 0%;
 	right: 0%;
@@ -201,12 +225,23 @@
 	right: auto;
 	bottom: 0%;
 }
+form {
+	position: relative;
+	float: left;
+	height: auto;
+	width: auto;
+	top: auto;
+	left: 0%;
+	right: auto;
+	bottom: auto;
+}
+
 #bottomCopyrightInformation {
 	background-color: #F0F0F0;
-	height: 10%;
-	width: 100%;
-	position: relative;
-	float: none;
+	height: auto;
+	width: 98%;
+	position:absolute;
+	float: bottom;
 	top: auto;
 	left: auto;
 	right: auto;

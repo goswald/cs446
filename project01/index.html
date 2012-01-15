@@ -9,73 +9,94 @@
     </link>
     <link rel="stylesheet" type="text/css" href="res/css/divs.css">
     </link>
+    <link rel="stylesheet" type="text/css" href="res/css/classes.css">
+    </link>
     <body>
         <div id="container">
             <div id="header">
-                Magic Life Figure-Outer Stuff Goes Here!
-                <br>...With subtext, even!</br>
+                <div id="title">The Magic Life Figure-Outer!</div>
+                <div id="subtext">Figuring out your life, so you don't have to...</div>
             </div>
-            <div id="menu">
-                <div id="buttonDiv">
-                    <a href=#>Home!</a>
-                </div>
-                <div id="buttonDiv">
-                    <a href=#>Interests!</a>
-                </div>
-                <div id="buttonDiv">
-                    <a href=#>Health!</a>
-                </div>
-                <div id="buttonDiv">
-                    <a href=#>Academic!</a>
-                </div>
-                <div id="buttonDiv">
-                    <a href=#>Professional!</a>
-                </div>
-                <div id="buttonDiv">
-                    <a href=#>Fun!</a>
-                </div>
-                <div id="buttonDiv">
-                    <a href=#>Eeeeevil!</a>
-                </div>
+            <div id="menu" class="menu">
+                <ul>
+                    <li><a href=#>Home</a></li>
+                    <li><a href=#>Interests</a></li>
+                    <li><a href=#>Health</a></li>
+                    <li><a href=#>Academic</a></li>
+                    <li><a href=#>Professional</a></li>
+                    <li><a href=#>Fun</a></li>
+                    <li><a href=#>Evil</a></li>
+                </ul>
             </div>
             <div id="main">
-				<div id="formContainers">
-						<div id="loremIpsum">
-							<h1>Lorem Ipsum Dolor Sit Amet.</h1>
-						</div>					
-						<div id="textBoxLabel">
-							Words go here!
-						</div>
-						<div id="textBox">
-							A text box goes here!
-						</div>
-						<div id="selectBoxWithLabel">
-							<div id="selectBoxLabel">
-								More words go here!
-							</div>
-							<div id="selectBox">
-							A multi-select box goes here!
-							</div>
-							<div id="space">
-								(space)
-							</div>
-							<div id="button">
-								Button.
-							</div>						
-						</div>
-					</div>
-				</div>
-				<div id="progressContainer">
-					<div id="currentProgress">
-							Current Progress in Life
-							<div id="lifeStatus">
-							</div>
-					</div>
-				</div>	
-				<div id="bottomCopyrightInformation">
-					Borg Copyright stuff goes here!
-				</div>
-			</div>
-		</div>
+                <div id="formContainers">
+                    <div id="loremIpsum">
+                        Lorem Ipsum Dolor Sit Amet.
+                    </div>
+                    <form>
+                        <table id="formOrganizer" border=0>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+
+                                <td>
+                                    How do you feel today?
+                                </td>
+                                <td>
+                                    <input type="text" name="howYouDoin"></input>
+                                </td>
+                            </tr>
+                           <tr>
+                                <td>
+                                    How would you like to feel?
+                                    <br>(choose all that apply)</br>
+                                </td>
+                                <td>
+                                    <select multiple size=4>
+                                        <option value="o1">Comfortably numb</option>
+                                        <option value="o2">Grumpy as poop, you jerk</option>
+                                        <option value="o3">Happy like I'm on controlled substances</option>
+                                        <option value="o4">Normal.  Absolutely normal.</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                    <input type="submit" action="" value="Feel Me!"></input>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div id="progressContainer">
+                    <div id="currentProgress">
+                            Current Progress in Life
+                            <div id="lifeStatus">
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bottomCopyrightInformation">
+                    Borg Copyright stuff goes here!
+            </div>
+        </div>
     </body>
 </html>
