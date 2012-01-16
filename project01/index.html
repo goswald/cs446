@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="res/css/main.css">
+        </link>
+        <link rel="stylesheet" type="text/css" href="res/css/divs.css">
+        </link>
+        <link rel="stylesheet" type="text/css" href="res/css/classes.css">
+        </link>
+        <script type="text/javascript" src="res/js/textcheck.js">
+        </script>
     </head>
     <title>
         Life Figure-Outer Application
     </title>
-    <link rel="stylesheet" type="text/css" href="res/css/main.css">
-    </link>
-    <link rel="stylesheet" type="text/css" href="res/css/divs.css">
-    </link>
-    <link rel="stylesheet" type="text/css" href="res/css/classes.css">
-    </link>
     <body>
         <div id="container">
             <div id="header">
@@ -32,8 +34,8 @@
                 <div id="loremIpsum">
                     Lorem Ipsum Dolor Sit Amet.
                 </div>
-                <form name="intputForm">
-                    <div id="formOrganizer">
+                <form name="inputForm" onsubmit="checkText()">
+                    <div id="formOrganizer" name="formOrganizer">
                         <div id="labels">
                             <div id="texboxLabel">
                                 How do you feel today?
@@ -43,8 +45,8 @@
                                 <br>(choose all that apply)</br>
                             </div>
                         </div>
-                        <div id="inputs">
-                            <div id="texbox">
+                        <div id="inputs" name="inputs">
+                            <div id="texbox" name="textbox">
                                 <input type="text" name="howYouDoin"></input>
                             </div>
                             <div id="selectbox">
@@ -56,7 +58,7 @@
                                 </select>
                             </div>
                             <div id="button">
-                                <input type="submit" action="" value="Feel Me!"></input>  
+                                <input type="submit" value="Feel Me!"></input>  
                             </div>
                         </div> 
                     </div>
