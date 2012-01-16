@@ -179,7 +179,7 @@
 #progressContainer {	
 	float: right;
 	height: auto;
-	width: 30%;
+	width: 50%;
 	position: relative;
 	top: 0%;
 	right: 0%;
@@ -197,18 +197,26 @@
 	width: 75%;
 	position: relative;
 	font-style: bold;
+	font-weight: bold;
+	font-size: 120%;
 	top: 0%;
 	left: 0%;
 	right: 0%;
 	bottom: auto;
-	padding: 1%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	padding-left: 1%;
+	padding-right: 1%;
 }
 #lifeStatus {
-	float: left;
+	float: bottom;
 	height: auto;
 	width: auto;
 	position: relative;
 	top: auto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 80%;
 	left: 0%;
 	right: auto;
 	bottom: 0%;
