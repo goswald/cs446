@@ -10,7 +10,9 @@ class Player
             go_back_and_heal(warrior)
         end       
     else
-        if warrior.feel.captive? then
+        if warrior.feel.wall? then
+            warrior.pivot!
+        elsif warrior.feel.captive? then
             warrior.rescue!
         elsif warrior.health < 5 then
             go_back_and_heal(warrior)
