@@ -50,7 +50,7 @@
                                 <input type="text" name="howYouDoin"></input>
                             </div>
                             <div id="selectbox">
-                                <select multiple="multiple" size="4">
+                                <select multiple size=4>
                                     <option value="o1">Comfortably numb</option>
                                     <option value="o2">Grumpy as poop, you jerk</option>
                                     <option value="o3">Happy like I'm on controlled substances</option>
