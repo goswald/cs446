@@ -12,4 +12,42 @@
  *= require_tree .
 */
 
+body {
+    text-align: center;
+    font-family: "Comic Sans MS";
+}
 
+h2.subtitle {
+    font-size: 100%;
+    font-style: normal;
+}
+
+#menu {
+    position: relative;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 50%;
+    left: 25%;
+}
+
+ul li {
+    width: auto;
+    display: inline;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+ul li.left {
+    width: auto;
+    display: inline;
+    padding-left: 0;
+    padding-right: 10%;
+}
+
+ul li.right {
+    width: auto;
+    display: inline;
+    padding-left: 10%;
+    padding-right: 0;
+}

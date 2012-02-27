@@ -1,25 +1,24 @@
+<h1>Articl.es</h1>
+<h2 class="subtitle">... what's "Articl" in Spanish anyway?</h2>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @article.title %>
-</p>
+<div id="menu">
+    <ul>
+        <li class="left"><%= link_to 'List all', articles_path %></li>
+        <li><%= link_to 'Edit', edit_article_path(@article) %></li>
+        <li><%= link_to 'Delete', @article, confirm: 'Are you sure?', method: :delete %></li>
+        <li class="right"><%= link_to 'E-mail', @article %></li>
+    </ul>
+</div>
 
 <p>
-  <b>Author:</b>
-  <%= @article.author %>
+  <h1 class="titleline"><%= @article.title %></h1>
+</p>
+<p>
+  <h2 class="authorline">by <%= @article.author %>.  <%= @article.num_edits %> edits since <%= @article.created_at.to_s :article_time %>.</h2>  
 </p>
 
-<p>
-  <b>Body:</b>
+<p class="articlebody">
   <%= @article.body %>
 </p>
-
-<p>
-  <b>Num edits:</b>
-  <%= @article.num_edits %>
-</p>
-
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
