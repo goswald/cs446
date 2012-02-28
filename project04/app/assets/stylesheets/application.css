@@ -12,14 +12,32 @@
  *= require_tree .
 */
 
-body {
-    text-align: center;
+body { 
     font-family: "Comic Sans MS";
 }
-
+a {
+    text-decoration: none;
+}
+h1 {
+    position: relative;
+    left: 2%;
+}
+h1.title {
+    font-style: bold;
+    font-size: 300%;
+    text-align: center;
+}
 h2.subtitle {
     font-size: 100%;
     font-style: normal;
+    text-align: center;
+}
+
+h2.authorline {
+    font-size: 100%;
+    font-style: normal;
+    position: relative;
+    left: 2%;
 }
 
 #menu {
@@ -28,26 +46,83 @@ h2.subtitle {
     border: 0;
     padding: 0;
     width: 50%;
-    left: 25%;
+    left: 0;
 }
 
-ul li {
+ul.menu li {
     width: auto;
     display: inline;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0;
+    float: center;
 }
 
-ul li.left {
+ul.menu li.left {
     width: auto;
     display: inline;
     padding-left: 0;
-    padding-right: 10%;
+    padding-right: 5%;
+    margin: 0;
+    float: left;
 }
 
-ul li.right {
+ul.menu li.right {
     width: auto;
     display: inline;
-    padding-left: 10%;
+    padding-left: 5%;
     padding-right: 0;
+    margin: 0;
+    float: center;
+}
+
+label {
+    vertical-align: top;
+    position: relative;
+    left: 15%;
+    float: left;
+}
+
+div.field {
+    width: 30%;
+    overflow: auto;
+}
+input {
+    float: right; 
+    position: relative;
+    right: 26%;
+}
+textarea {
+    float: right;
+    position: relative;
+    right: 0;
+}
+div.actions {
+    position: relative;
+    width: auto;
+    float: left;
+    left: 10.5%;
+}
+
+p.articlebody {
+    position: relative;
+    width: 50%;
+    font-family: "Comic Sans MS";
+    text-decoration: bold;
+    left: 2%;
+}
+
+div.tablecontents {
+    overflow: auto;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    height: 2%;
+}
+th {
+    background-color: #CCCCCC;
+}
+
+th.white {
+    background-color: #fff;
 }

@@ -1,12 +1,12 @@
 body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: "Comic Sans MS";
   font-size: 13px;
   line-height: 18px; }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: "Comic Sans MS";
   font-size: 13px;
   line-height: 18px; }
 
@@ -31,9 +31,14 @@ div {
   color: green; }
 
 .field_with_errors {
-  padding: 2px;
   background-color: red;
-  display: table; }
+  width: auto;
+  position: relative;
+    label {
+        background-color: red;
+        color: white;
+    }
+}
 
 #error_explanation {
   width: 450px;
@@ -43,7 +48,7 @@ div {
   margin-bottom: 20px;
   background-color: #f0f0f0;
   h2 {
-    text-align: left;
+    //text-align: left;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
     font-size: 12px;

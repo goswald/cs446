@@ -1,4 +1,4 @@
 class Article < ActiveRecord::Base
     validates :title, :author, :body, presence: true
-    validates_exclusion_of :author, :in => "pat", :message => "I'm sorry, but %{value} is not an accepted author name." 
+    validates_format_of :author, :with => %r{^((?!pat).*$)}i, message: "name isn't accepted"
 end

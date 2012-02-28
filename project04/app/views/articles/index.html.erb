@@ -1,32 +1,37 @@
-<h1>Articl.es</h1>
+<h1 class="title">Articl.es</h1>
 <h2 class="subtitle">...with a name .com hipsters love!</h2>
 
+
 <table>
+ <div title="Create a new article"><%= link_to new_article_path do %>
+    <%= image_tag('famfamfam_silk_icons_v013/icons/add.png') %>
+        Create an Article
+ <% end %></div>
  <col /><col /><col /><col />
   <tr>
     <th>Title</th>
     <th>Author Name</th>
     <th>Body</th>
     <th>Creation Date</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th class="white"></th>
+    <th class="white"></th>
+    <th class="white"></th>
   </tr>
-
 <% @articles.each do |article| %>
 <col />
-  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-    <td class="title"><%= article.title %></td>
-    <td class="author"><%= article.author %></td>
-    <td class="body"><%= truncate(article.body, length: 100) %></td>
-    <td class="date"><%= article.created_at.to_s :article_time %></td>
-    <td class="button"><%= link_to 'View', article %></td>
-    <td class="button"><%= link_to 'Edit', edit_article_path(article) %></td>
-    <td class="button"><%= link_to 'Delete', article, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+  
+    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td class="title"><%= article.title %></td>
+        <td class="author"><%= article.author %></td>
+        <td class="body"><%=  truncate(strip_tags(article.body), length: 100) %></td>
+        <td class="date"><%= article.created_at.to_s :article_time %></td>
+        <td class="button" title="View this article"><%= link_to image_tag('famfamfam_silk_icons_v013/icons/zoom.png'), article %></td>
+        <td class="button" title="Edit this article"><%= link_to image_tag('famfamfam_silk_icons_v013/icons/pencil.png'), edit_article_path(article) %></td>
+        <td class="button" title="Delete this article"><%= link_to image_tag('famfamfam_silk_icons_v013/icons/bin.png'), article, confirm: 'Are you sure?', method: :delete %></td>
+     </tr>
 <% end %>
 </table>
 
-<br />
+<%= Article.count %> articles.
 
-<%= link_to 'New Article', new_article_path %>
+<br />
