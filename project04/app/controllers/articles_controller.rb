@@ -25,6 +25,7 @@ class ArticlesController < ApplicationController
   # GET /articles/new.json
   def new
     @article = Article.new
+    session[:last_article_page] = request.env['HTTP_REFERER'] || articles_url
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,17 +36,17 @@ class ArticlesController < ApplicationController
   # GET /articles/1/edit
   def edit
     @article = Article.find(params[:id])
+    session[:last_article_page] = request.env['HTTP_REFERER'] || articles_url
   end
 
   # POST /articles
   # POST /articles.json
   def create
     @article = Article.new(params[:article])
-    session[:last_article_page] = request.env['HTTP_REFERER'] 
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
+        format.html { redirect_to session[:last_article_page], notice: 'Article was successfully created.' }
         format.json { render json: @article, status: :created, location: @article }
       else
         format.html { render action: "new" }
@@ -59,10 +60,11 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     @article.num_edits +=1
+   
 
     respond_to do |format|
       if @article.update_attributes(params[:article])
-        format.html { redirect_to @article, notice: 'Article was successfully updated.' }
+        format.html { redirect_to session[:last_article_page], notice: 'Article was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

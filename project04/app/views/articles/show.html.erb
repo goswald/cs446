@@ -6,7 +6,7 @@
 <div id="menu">
     <ul class="menu">
         <li class="left" title="Return to previous page">
-                  <%= link_to :back  do %>
+                  <%= link_to session[:last_article_page]  do %>
                     <%= image_tag('famfamfam_silk_icons_v013/icons/arrow_left.png') %>
                     list all articles
                 <% end %>

@@ -1,7 +1,7 @@
 <h1 class="title">Articl.es</h1>
 <h2 class="subtitle">...my cousin works for Bit.ly</h2>
 
-<%= link_to :back  do %>
+<%= link_to session[:last_article_page] do %>
     <%= image_tag('famfamfam_silk_icons_v013/icons/arrow_left.png', :tooltip => "Back to previous page") %>
     back
 <% end %>
