@@ -126,3 +126,17 @@ th {
 th.white {
     background-color: #fff;
 }
+#banner {
+    position: relative;
+    float: top;
+    left: 0;
+    width: 75%;
+    padding-bottom: 1%;
+    font-size: 200%;
+}
+div.newbutton {
+position: relative;
+float: top;
+left: 45%;
+font-size: 50%; 
+}
