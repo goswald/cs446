@@ -1,0 +1,46 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.articles {
+    background-color: #fff;
+    font-family: "Comic Sans MS";
+    
+    table {
+        border-collapse: collapse;
+        font-family: "Comic Sans MS";
+        text-align: left;
+    }
+    table col {
+        border: 2px solid black;
+    }
+    
+    table tr td {
+        padding: 5px;
+        vertical-align: top;
+    }
+    table tr td.button {
+        background-color: #fff;
+    }
+    .body {
+        width: 60%;
+        
+        dl {
+            margin: 0;
+        }
+        dd {
+            margin: 0;
+        }
+    }
+    .list_actions {
+        font-size: x-small;
+        text-align: right;
+        padding-left: 1em;
+    }
+    .list_line_even {
+        background: #fff;
+    }
+    .list_line_odd {
+        background: #eee;
+    }
+}

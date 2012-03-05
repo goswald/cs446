@@ -1,0 +1,17 @@
+<h1 class="title">Articl.es</h1>
+<h2 class="subtitle">...my cousin works for Bit.ly</h2>
+
+<%= link_to session[:last_article_page] do %>
+    <%= image_tag('famfamfam_silk_icons_v013/icons/arrow_left.png', :tooltip => "Back to previous page") %>
+    back
+<% end %>
+
+<br />
+<br />
+<h1>Editing "<%= @article.title %>"</h1>
+<br />
+
+<%= render 'form', submit_button: 'Save Changes', :tooltip => "Save and return to previous page" %>
+
+
+
