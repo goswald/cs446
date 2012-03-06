@@ -1,0 +1,28 @@
+%h1.title Articl.es
+%h2.subtitle ... what's "Articl" in Spanish anyway?
+%p#notice= notice
+#menu
+  %ul.menu
+    %li.left{:title => "Return to previous page"}
+      = link_to session[:last_article_page]  do
+        = image_tag('famfamfam_silk_icons_v013/icons/arrow_left.png')
+        list all articles
+    %li{:title => "Edit this article"}
+      = link_to edit_article_path(@article) do
+        = image_tag('famfamfam_silk_icons_v013/icons/pencil.png',)
+        edit
+    %li{:title => "Delete this article"}
+      = link_to @article, confirm: 'Are you sure?', method: :delete do
+      = image_tag('famfamfam_silk_icons_v013/icons/bin.png', :tooltip => "Delete this article")
+      delete
+    %li.right{:title => "E-mail the webmaster"}
+      %a{:href => "mailto:webmaster@articl.es"}
+        = image_tag('famfamfam_silk_icons_v013/icons/email.png')
+        email
+%p
+  %h1.titleline= @article.title
+%p
+  %h2.authorline
+    by #{@article.author}.  #{pluralize(@article.num_edits, "edit")} since #{@article.created_at.to_s :article_time}.
+%p.articlebody
+  = sanitize @article.body

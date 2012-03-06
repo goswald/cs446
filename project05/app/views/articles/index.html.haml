@@ -1,0 +1,40 @@
+%h1.title Articl.es
+%h2.subtitle ...with a name .com hipsters love!
+%table
+  #banner
+    All the World's Articles
+    = will_paginate @articles
+    .newbutton{ :title => "Create a new article" }
+      = link_to new_article_path do
+        = image_tag('famfamfam_silk_icons_v013/icons/add.png')
+        Create an Article
+  #top_pag
+    = will_paginate @articles 
+  %col/
+  %col/
+  %col/
+  %col/
+  %col.nb/
+  %col.nb/
+  %col.nb/
+  %tr
+    %th Title
+    %th Author Name
+    %th Body
+    %th Creation Date
+    %th.white
+    %th.white
+    %th.white
+  - @articles.each do |article|    
+    %tr{:class => cycle('list_line_odd', 'list_line_even')}
+      %td.title= article.title
+      %td.author= article.author
+      %td.body= truncate(strip_tags(article.body), length: 100)
+      %td.date= article.created_at.to_s :article_time
+      %td.button{:title => "View this article"}= link_to image_tag('famfamfam_silk_icons_v013/icons/zoom.png'), article
+      %td.button{:title => "Edit this article"}= link_to image_tag('famfamfam_silk_icons_v013/icons/pencil.png'), edit_article_path(article)
+      %td.button{:title => "Delete this article"}= link_to image_tag('famfamfam_silk_icons_v013/icons/bin.png'), article, confirm: 'Are you sure?', method: :delete
+#bot_pag
+  = will_paginate @articles
+= pluralize(Article.count, "article")+"."
+%br/

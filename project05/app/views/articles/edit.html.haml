@@ -1,0 +1,11 @@
+%h1.title Articl.es
+%h2.subtitle ...my cousin works for Bit.ly
+= link_to session[:last_article_page] do
+  = image_tag('famfamfam_silk_icons_v013/icons/arrow_left.png', :tooltip => "Back to previous page")
+  back
+%br/
+%br/
+%h1
+  Editing "#{@article.title}"
+%br/
+= render 'form', submit_button: 'Save Changes', :tooltip => "Save and return to previous page"

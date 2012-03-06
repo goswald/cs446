@@ -1,0 +1,10 @@
+%h1.title Articl.es
+%h2.subtitle ... not just for the country of Spain
+= link_to articles_path do
+  = image_tag('famfamfam_silk_icons_v013/icons/arrow_left.png')
+  list all articles
+%br/
+%br/
+%h1 Creating a New Article
+%br/
+= render 'form', submit_button: 'Create!'
