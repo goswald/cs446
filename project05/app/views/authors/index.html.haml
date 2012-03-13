@@ -1,17 +1,36 @@
-%h1 Listing authors
+%h1.title Articl.es
+%h2.subtitle ...adding authors 'round the world
+
 %table
+  #banner
+    All the Authors
+  %div.centered
+    = will_paginate @authors
+  %col/
+  %col/
+  %col.nb/
+  %col.nb/
+  %col.nb/
   %tr
-    %th Author
+    %th Author ID
     %th Name
-    %th
-    %th
-    %th
+    %th.white
+    %th.white
+    %th.white
   - @authors.each do |author|
-    %tr
-      %td= author.author_id
+    %tr{:class => cycle('list_line_odd', 'list_line_even')}
+      %td= author.id
       %td= author.name
-      %td= link_to 'Show', author
-      %td= link_to 'Edit', edit_author_path(author)
-      %td= link_to 'Destroy', author, confirm: 'Are you sure?', method: :delete
+      %td.button{:title => "Author Profile" }= link_to image_tag('famfamfam_silk_icons_v013/icons/zoom.png'), author
+      %td.button{:title => "Edit Author"}= link_to image_tag('famfamfam_silk_icons_v013/icons/pencil.png'), edit_author_path(author)
+      %td.button{:title => "Delete Author"}= link_to image_tag('famfamfam_silk_icons_v013/icons/bin.png'), author, confirm: 'Are you sure?', method: :delete
+%div.centered
+  = will_paginate @authors
+%div.padded
+  = pluralize(Author.count, "author")+"."
+
+%div.padded{:title => "Add an Author" }
+  = link_to new_author_path do
+    = image_tag('famfamfam_silk_icons_v013/icons/add.png')
+    Add an Author
 %br/
-= link_to 'New Author', new_author_path

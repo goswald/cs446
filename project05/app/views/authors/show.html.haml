@@ -1,10 +1,28 @@
 %p#notice= notice
 %p
-  %b Author:
-  = @author.author_id
+%h1.title Articl.es
+%h1.subtitle ...check this guy!
 %p
-  %b Name:
-  = @author.name
-= link_to 'Edit', edit_author_path(@author)
-|
-\#{link_to 'Back', authors_path}
+  %h1.subtitle= @author.name
+  %div.picture
+  %br/
+  %br/
+  %table
+    Articles:
+    %div.centered= will_paginate @articles
+    %col/
+    %col/
+    %col/
+    %tr
+      %th Title
+      %th Body
+      %th Creation Date
+    - @author.articles.each do |article|
+      %tr{:class => cycle('list_line_odd', 'list_line_even')}
+      %td.title= article.title
+      %td.body= truncate(strip_tags(article.body), length:100)
+      %td.date= article.created_at.to_s :article_time
+%div.centered= will_paginate @articles
+%div.padded= pluralize(Author.articles.count, "article")
+  by this author.
+%br/

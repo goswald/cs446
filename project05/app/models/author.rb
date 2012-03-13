@@ -4,3 +4,6 @@ class Author < ActiveRecord::Base
 #    attr_accessible :picture
 #    has_attached_file :picture #:styles => { :medium => "300x300>", :thumb => "100x100>" }, :url => "/assets/authors/:id/:style/:basename.:extension", :path => ":rails_root/public/assets/products/:id/:style/:basename.:extension"
 end
+class Author
+  self.per_page = 10
+end

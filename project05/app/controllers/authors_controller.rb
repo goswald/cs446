@@ -2,7 +2,7 @@ class AuthorsController < ApplicationController
   # GET /authors
   # GET /authors.json
   def index
-    @authors = Author.all
+    @authors = Author.paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,6 +25,7 @@ class AuthorsController < ApplicationController
   # GET /authors/new.json
   def new
     @author = Author.new
+    session[:last_author_page] = request.env['HTTP_REFERER'] || authors_url
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class AuthorsController < ApplicationController
   # GET /authors/1/edit
   def edit
     @author = Author.find(params[:id])
+    session[:last_author_page] = request.env['HTTP_REFERER'] || authors_url 
   end
 
   # POST /authors
@@ -44,7 +46,7 @@ class AuthorsController < ApplicationController
 
     respond_to do |format|
       if @author.save
-        format.html { redirect_to @author, notice: 'Author was successfully created.' }
+        format.html { redirect_to session[:last_author_page], notice: 'Author was successfully created.' }
         format.json { render json: @author, status: :created, location: @author }
       else
         format.html { render action: "new" }
@@ -60,7 +62,7 @@ class AuthorsController < ApplicationController
 
     respond_to do |format|
       if @author.update_attributes(params[:author])
-        format.html { redirect_to @author, notice: 'Author was successfully updated.' }
+        format.html { redirect_to session[:last_author_page], notice: 'Author was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
