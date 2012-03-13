@@ -11,8 +11,8 @@
     = f.label :title
     = f.text_field :title, rows: 1
   .field
-    = f.label :author
-    = f.text_field :author, rows: 1
+    = f.label :author_id
+    = f.select :author_id, Author.all.collect {|t| [t.name, t.id]}, {prompt: ".-~=[Select an Author]=~-."}
   .field
     = f.label :body
     = f.text_area :body, rows: 15

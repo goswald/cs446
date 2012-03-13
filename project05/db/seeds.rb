@@ -5,9 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Author.delete_all
+
+@AuthorOne = Author.create(name: "Marcus Tullius Cicero")
+
+@AuthorOne.save
 Article.delete_all
 15.times do
-    Article.create(title: 'Lorem Ipsum', author_id: 1, body: %{<p class="articlebody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae nibh eu massa elementum condimentum quis vitae eros. Duis quis quam odio. Etiam molestie congue sapien, vel suscipit massa eleifend eu. In a nulla ac nulla dapibus sodales. Aenean rutrum mauris vel libero semper non blandit augue mollis. Mauris sed ornare velit. Duis euismod tincidunt nisi, non faucibus sem fermentum malesuada. Curabitur condimentum sagittis feugiat. Aliquam justo velit, interdum eget euismod ut, convallis nec risus. Fusce sed ligula at odio convallis adipiscing.</p>
+    Article.create(title: 'Lorem Ipsum', :author_id => @AuthorOne.id, body: %{<p class="articlebody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae nibh eu massa elementum condimentum quis vitae eros. Duis quis quam odio. Etiam molestie congue sapien, vel suscipit massa eleifend eu. In a nulla ac nulla dapibus sodales. Aenean rutrum mauris vel libero semper non blandit augue mollis. Mauris sed ornare velit. Duis euismod tincidunt nisi, non faucibus sem fermentum malesuada. Curabitur condimentum sagittis feugiat. Aliquam justo velit, interdum eget euismod ut, convallis nec risus. Fusce sed ligula at odio convallis adipiscing.</p>
 
 <p class="articlebody">Duis sollicitudin tempus malesuada. Proin et mauris diam, et consectetur libero. Vivamus eget erat dui, vel sagittis magna. Sed tristique, nunc sit amet consequat imperdiet, magna neque mattis velit, non vehicula nisl nibh nec lectus. Sed nec arcu velit. In mollis faucibus molestie. Praesent quam turpis, luctus ac lobortis in, scelerisque congue enim. Vestibulum id iaculis sem. Quisque accumsan nisi sed neque vehicula cursus. Phasellus ornare sagittis purus, non egestas sapien ultrices quis.</p>
 
@@ -18,5 +24,3 @@ Article.delete_all
 <p class="articlebody">Quisque nunc purus, consequat non varius pulvinar, convallis molestie mauris. Curabitur cursus pellentesque egestas. Sed sed justo mi. Maecenas fermentum mauris sed nulla aliquet non egestas metus iaculis. Nulla vitae felis sapien. Etiam in leo sodales mi vestibulum consectetur. Donec fermentum tempus augue eu pulvinar. Aenean malesuada tortor mi. Proin pretium, eros ut elementum placerat, nulla nisi luctus leo, fringilla consequat velit justo sit amet ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque interdum mi nec nisl hendrerit pharetra. Pellentesque accumsan elit a sem tristique porta. Integer libero odio, convallis eget dictum vel, sollicitudin eu odio. Nullam congue dapibus auctor.</p>})
 end
 
-Author.delete_all
-Author.create(name: "Marcus Tullius Cicero", author_id: 1)

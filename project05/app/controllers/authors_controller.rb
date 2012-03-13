@@ -40,7 +40,7 @@ class AuthorsController < ApplicationController
   # POST /authors
   # POST /authors.json
   def create
-    @author = Author.new(params[:author])
+    @author = Author.create(params[:author])
 
     respond_to do |format|
       if @author.save
