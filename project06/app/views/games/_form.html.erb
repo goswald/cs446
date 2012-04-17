@@ -1,0 +1,16 @@
+<%= form_for @game do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :rating %><br />
+    <%= f.text_field :rating %>
+  </p>
+  <p>
+    <%= f.label :author_id %><br />
+    <%= f.number_field :author_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
