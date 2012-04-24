@@ -1,8 +1,8 @@
 var guessesLeft = 10;
 var highScores = new Array([9, "HarryJamesPotter"], [3, "ZedCthulhu"], [2, "NearlyDied"]);
-var number = Math.floor(Math.random()*101);
+var number = Math.ceil(Math.random()*100);
 var theDate = new Date();
-var dateTimeVariable = (theDate.getFullYear() + theDate.getMonth() + theDate.getDate() + theDate.getHours() + theDate.getMinutes() + theDate.getSeconds());
+var dateTimeVariable = (theDate.getFullYear().toString() + (theDate.getMonth()+1).toString() + theDate.getDate().toString() + theDate.getHours().toString() + theDate.getMinutes().toString() + theDate.getSeconds().toString());
 
 $(function() {
   updateScore(guessesLeft);
@@ -10,16 +10,30 @@ $(function() {
 });
 
 function addUser(score, name) {
-  highScores.push([score, name]);
-  highScores.sort();
+  highScores.push([score+0, name]);
+  highScores.sort(compareNumbers);
   highScores.reverse();
   populateHighScores(highScores);
+}
+
+function compareNumbers(firstNum, secondNum) { 
+  return parseInt(firstNum[0]) - parseInt(secondNum[0])
+  /*
+  Logic courtesy of Zeke Chopper.  THANK YOU, ZEKE.
+  Since I got help for this from Zeke, I'll explain so that my 
+  understanding  of the code is known.  highScores.sort() takes a 
+  function, which it uses  to then compare numbers.  Without this, I'm 
+  assuming it just parses the different character and integer values as
+  the strings to compare, hence the difference between "10 - name" and
+  toInt("1" + "0" + " " + "-" + " " + "name").
+  */
 }
 
 function playAgain() {
   number = Math.floor(Math.random()*101);
   guessesLeft = 10;
   updateScore(guessesLeft);
+  $("#guess").val("");
 }
 
 function fadeIn() {
@@ -27,13 +41,15 @@ function fadeIn() {
   $("p").fadeIn("fast");
   $("#guessTheNumber").fadeIn("fast");
   $("h2").fadeIn("fast");
+  $("div#highScores").fadeIn("fast");
 }
 
 function fadeOut() {
-  $("h1").fadeOut("fast");
-  $("p").fadeOut("fast");
-  $("#guessTheNumber").fadeOut("fast");
-  $("h2").fadeOut("fast");
+  $("h1").fadeOut("slow");
+  $("p").fadeOut("slow");
+  $("#guessTheNumber").fadeOut("slow");
+  $("h2").fadeOut("slow");
+  $("div#highScores").fadeOut("slow");
 }
 
 function guessMe() {
@@ -62,7 +78,7 @@ function guessMe() {
         }
         else {
           alert("ENJOY YOUR REMAINING DAYS...");
-          window.close();
+          window.close();  // This doesn't always work.
         }
       } 
   }
@@ -77,12 +93,11 @@ function youLost() {
   }
   else {
     alert("ENJOY DEATH'S ICY EMBRACE...");
-    window.close();
   }
 }
     
 function populateHighScores(scores) {
-//  $("div#highScores").text("");
+  $("div#highScores").text("");
   for (var i = 0; i < scores.length; ++i) {
     $('div#highScores').append("<p>" + scores[i][0] + " " + scores[i][1] + "</p>");
   }
@@ -93,7 +108,6 @@ function updateScore(score) {
 }
 
 $(document).ready(function() {
-  alert("NUMBER IS " + number);
   $("#btnGuess").click(function() {
       guessMe();   
   });
