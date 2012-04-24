@@ -27,11 +27,11 @@ h2#score {
 }
 
 input#guess {
-  font-size: 8em;
+  font-size: 5em;
 }
 
 input#btnGuess {
-  font-size: 20em;
+  font-size: 5em;
 }
 
 form#guessTheNumber {
