@@ -1,0 +1,4 @@
+# Ignore the things left over from the unzipping of the project.
+guess_the_number
+guess_the_number.zip
+__MACOSX
